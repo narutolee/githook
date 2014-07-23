@@ -17,7 +17,7 @@ function updateGitByName($name, $url){
   return shell_exec($str);
 }
 
-//´Ógitlab¹ýÀ´µÄÊý¾Ý
+//ï¿½ï¿½gitlabï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 $content = file_get_contents('php://input');
 
 if($content){
@@ -25,10 +25,10 @@ if($content){
 	$repo = $data->repository;
 	echo updateGitByName($repo->name, $repo->url);
 }else{
-	//´ÓURL¹ýÀ´µÄÊý¾Ý
+	//ï¿½ï¿½URLï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	$name = $_REQUEST['name'];
 	if($name){
-		$url = "git@gitlab.alibaba-inc.com:yunos-f2e/$name.git";
+		$url = "https://github.com/narutolee/$name.git";
 		echo updateGitByName($name, $url);
 	}else{
 		echo "error: invalid parameters.";
